@@ -6,7 +6,7 @@ import java.util.Date;
 public class Tournee {
 
     private Date date;
-    private ArrayList<Visite> lesVisites = new ArrayList<>();
+    private ArrayList<Visite> lesVisites;
     private int kmRealise;
     private Inseminateur leInsiminateur;
 
@@ -14,6 +14,7 @@ public class Tournee {
         this.date = date;
         this.kmRealise = kmRealise;
         this.leInsiminateur = leInsiminateur;
+        this.lesVisites  = new ArrayList<>();
     }
 
     public Date getDate() {
