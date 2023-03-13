@@ -22,14 +22,22 @@ public class GestionTournee {
     }
 
     public float CATourneeTypePrestation(TypePrestation typePrestation){
-
+        float CAPrestation = 0;
+        for (Visite visite: laTournee.getLesVisites()){
+            for (PrestationVisite prestationVisite: visite.getLesPrestationsVisite()) {
+                if (prestationVisite.getLeTypePrestation().toString().compareTo(typePrestation.getLibelle()) ==0){
+                    CAPrestation = visite.montantAFacture();
+                }
+            }
+        }
         return 0;
     }
 
     public float CATournee(){
         float CA = 0;
-
-
+        for (Visite visite: laTournee.getLesVisites()){
+            CA += visite.montantAFacture();
+        }
         return CA;
     }
 }
