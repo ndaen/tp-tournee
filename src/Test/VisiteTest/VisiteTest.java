@@ -27,6 +27,7 @@ class VisiteTest {
 
     @Test
     void montantAFacture() {
+        // Test de Montant a facturer
         assertEquals(350,this.visite1.montantAFacture());
     }
 }

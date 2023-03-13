@@ -6,7 +6,7 @@ import java.util.Date;
 public class Tournee {
 
     private Date date;
-    private ArrayList<Visite> lesVisites;
+    private ArrayList<Visite> lesVisites = new ArrayList<>();
     private int kmRealise;
     private Inseminateur leInsiminateur;
 

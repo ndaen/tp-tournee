@@ -26,11 +26,11 @@ public class GestionTournee {
         for (Visite visite: laTournee.getLesVisites()){
             for (PrestationVisite prestationVisite: visite.getLesPrestationsVisite()) {
                 if (prestationVisite.getLeTypePrestation().getLibelle().compareTo(typePrestation.getLibelle()) == 0){
-                    CAPrestation = visite.montantAFacture();
+                    CAPrestation += prestationVisite.getNombresActes() * prestationVisite.getLeTypePrestation().getPrixForfaitaire();
                 }
             }
         }
-        return 0;
+        return CAPrestation;
     }
 
     public float CATournee(){
