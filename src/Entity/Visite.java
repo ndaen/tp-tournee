@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Visite {
     private Adherent leAdherent;
-    private ArrayList<PrestationVisite> lesPrestationsVisite;
+    private ArrayList<PrestationVisite> lesPrestationsVisite = new ArrayList<>();
     private String heure;
 
     public Visite(Adherent leAdherent, String heure) {
@@ -30,6 +30,7 @@ public class Visite {
     }
 
     public void ajouterPrestationVisite(TypePrestation typePrestation, int nombresActes) {
+
         PrestationVisite prestationVisite = new PrestationVisite(typePrestation, nombresActes);
         lesPrestationsVisite.add(prestationVisite);
     }

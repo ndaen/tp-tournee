@@ -25,7 +25,7 @@ public class GestionTournee {
         float CAPrestation = 0;
         for (Visite visite: laTournee.getLesVisites()){
             for (PrestationVisite prestationVisite: visite.getLesPrestationsVisite()) {
-                if (prestationVisite.getLeTypePrestation().toString().compareTo(typePrestation.getLibelle()) ==0){
+                if (prestationVisite.getLeTypePrestation().getLibelle().compareTo(typePrestation.getLibelle()) == 0){
                     CAPrestation = visite.montantAFacture();
                 }
             }
